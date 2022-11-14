@@ -4,9 +4,10 @@
 #include "Classes.h"
 
 int main() {
-    std::cout << "Hello, world!\n";
-    std::cout << "test";
-    std::cout << "test2";
+
+    Carte c1{"The C++ Programming Language"};
+    std::cout << c1;
+
     return 0;
 
 }

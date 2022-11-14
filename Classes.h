@@ -12,7 +12,8 @@ class Carte{
     //double pret;
     //int nr_pagini;
 public:
-    Carte(const std::string &nume) : nume(nume) {}
+    Carte(const std::string &nume, const std::string &serie, const std::string &categorie) : nume(nume), serie(serie),
+                                                                                             categorie(categorie) {}
 
     const std::string &getNume() const {
         return nume;
@@ -22,8 +23,24 @@ public:
         Carte::nume = nume;
     }
 
+    const std::string &getSerie() const {
+        return serie;
+    }
+
+    void setSerie(const std::string &serie) {
+        Carte::serie = serie;
+    }
+
+    const std::string &getCategorie() const {
+        return categorie;
+    }
+
+    void setCategorie(const std::string &categorie) {
+        Carte::categorie = categorie;
+    }
+
     friend std::ostream &operator<<(std::ostream &os, const Carte &carte) {
-        os << "nume: " << carte.nume;
+        os << "nume: " << carte.nume << " serie: " << carte.serie << " categorie: " << carte.categorie;
         return os;
     }
 

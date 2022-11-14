@@ -19,24 +19,24 @@ public:
         return nume;
     }
 
-    void setNume(const std::string &nume) {
-        Carte::nume = nume;
+    void setNume(const std::string &_nume) {
+        Carte::nume = _nume;
     }
 
     const std::string &getSerie() const {
         return serie;
     }
 
-    void setSerie(const std::string &serie) {
-        Carte::serie = serie;
+    void setSerie(const std::string &_serie) {
+        Carte::serie = _serie;
     }
 
     const std::string &getCategorie() const {
         return categorie;
     }
 
-    void setCategorie(const std::string &categorie) {
-        Carte::categorie = categorie;
+    void setCategorie(const std::string &_categorie) {
+        Carte::categorie = _categorie;
     }
 
     friend std::ostream &operator<<(std::ostream &os, const Carte &carte) {

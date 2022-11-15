@@ -28,3 +28,4 @@ Carte::~Carte(){
     //std::cout << "Destructor pentru Carte\n";
 
 }
+

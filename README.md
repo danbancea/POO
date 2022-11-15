@@ -1,7 +1,6 @@
-# OOP Template
-
 ### Editura
 
+Pentru primul proiect mi-am propus sa gestionez organizarea unei edituri in raport cu clientii(librariile)
 
 
 ## Tema 1

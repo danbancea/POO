@@ -14,12 +14,8 @@ class Carte{
 
 public:
 
-
-    //Carte(const std::string& nume_, std::string& serie_, std::string& categorie_, double pret);
-
-    Carte(const std::string &nume_, const std::string &autor_, const std::string &categorie_,  const std::string &serie_, double pret_) :
-            nume(nume_), autor(autor_), categorie(categorie_),  serie(serie_), pret(pret_) {}
-
+    Carte(const std::string &nume, const std::string &autor, const std::string &categorie, const std::string &serie,
+          double pret);
 
     Carte(const Carte& other);
     Carte& operator = (const Carte& other);
@@ -32,6 +28,18 @@ public:
     }
 
 };
+
+class Autor{
+    std::string nume;
+    std::vector <Carte> carti;
+    int varsta;
+    int nrc_scrise;
+public:
+    Autor(const std::string &nume, const std::vector<Carte> &carti, int varsta, int nrcScrise);
+
+    friend std::ostream &operator<<(std::ostream &os, const Autor &autor);
+};
+
 
 
 
@@ -65,9 +73,10 @@ class Curier{
     std::string nume;
     std::string curier;
     int nr_comanda;
+    std::vector <Client> clienti;
 
 public:
-    Curier(const std::string &nume, const std::string &curier, int nrComanda);
+    Curier(const std::string &nume, const std::string &curier, int nrComanda, const std::vector<Client> &clienti);
 
     friend std::ostream &operator<<(std::ostream &os, const Curier &curier);
 };

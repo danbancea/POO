@@ -20,6 +20,9 @@ Carte&Carte::operator=(const Carte& other){
 }
 
 
+
+
+
 Carte::~Carte() = default;
 
 //std::cout << "Destructor pentru Carte\n";
@@ -73,3 +76,5 @@ std::ostream &operator<<(std::ostream &os, const Curier &curier) {
 
     return os;
 }
+
+

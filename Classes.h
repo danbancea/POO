@@ -27,6 +27,13 @@ public:
         return os;
     }
 
+    void reducere_carte(const std::string &cat, double percent) {
+            if (cat == this -> categorie && percent != 0 && percent != 1)
+                this -> pret = this ->pret * percent;
+
+    }
+
+
 };
 
 class Autor{
@@ -38,6 +45,10 @@ public:
     Autor(const std::string &nume, const std::vector<Carte> &carti, int varsta, int nrcScrise);
 
     friend std::ostream &operator<<(std::ostream &os, const Autor &autor);
+
+
+
+
 };
 
 
@@ -80,5 +91,7 @@ public:
 
     friend std::ostream &operator<<(std::ostream &os, const Curier &curier);
 };
+
+
 
 #endif //OOP_CLASSES_H
